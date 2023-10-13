@@ -8,3 +8,7 @@ class User:
     def hide_password(self):
         """Encrypt the password"""
         pass
+
+    def check_password(self):
+        """Checks password for requirements"""
+        pass
