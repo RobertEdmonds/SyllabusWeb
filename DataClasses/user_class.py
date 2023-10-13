@@ -5,10 +5,15 @@ class User:
         self.username = username
         self.password = password
 
+    def get_password(self):
+        return self._password
+
     def hide_password(self):
         """Encrypt the password"""
         pass
 
-    def check_password(self):
+    def check_password(self, password):
         """Checks password for requirements"""
+        if password > 7:
+            self._password = password
         pass
