@@ -14,6 +14,7 @@ class User:
 
     def check_password(self, password):
         """Checks password for requirements"""
-        if password > 7:
+        if len(password) > 7:
             self._password = password
-        pass
+        else:
+            return "Password was rejected"
