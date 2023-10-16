@@ -1,4 +1,6 @@
 """This is to set up a user access to the site"""
+import re
+
 class User:
     """User Class"""
     def __init__(self, username, password):
@@ -14,6 +16,7 @@ class User:
 
     def check_password(self, password):
         """Checks password for requirements"""
+        password_regex = re.compile(r"^")
         if len(password) > 7:
             self._password = password
         else:
