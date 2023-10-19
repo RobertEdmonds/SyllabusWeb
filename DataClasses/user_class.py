@@ -1,5 +1,12 @@
 """This is to set up a user access to the site"""
 import re
+import sqlite3
+
+connection = sqlite3.connect(":memory:")
+
+cursor = connection.cursor()
+
+sql_file = open("lib/create.sql")
 
 class User:
     """User Class"""
