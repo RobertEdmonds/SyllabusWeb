@@ -16,7 +16,7 @@ class User:
 
     def check_password(self, password):
         """Checks password for requirements"""
-        password_regex = re.compile(r"^")
+        password_regex = re.compile(r"^(([A-Z]){1,}|([a-z]){1,}|([0-9]){1,}|(\W){1,}){8,}$")
         if len(password) > 7:
             self._password = password
         else:
